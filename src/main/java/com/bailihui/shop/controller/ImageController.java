@@ -19,8 +19,7 @@ import java.util.List;
  * @author Cnlomou
  * @create 2020/5/27 10:01
  */
-@Controller
-@CrossOrigin
+
 public class ImageController {
     @Resource
     ImageService imageService;

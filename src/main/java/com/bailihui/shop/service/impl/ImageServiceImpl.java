@@ -14,7 +14,7 @@ import java.util.*;
  * @author Cnlomou
  * @create 2020/5/27 10:01
  */
-@Service
+
 @Slf4j
 public class ImageServiceImpl implements ImageService {
 

@@ -82,6 +82,7 @@ public class LoginServiceImpl implements LoginService {
             tbAdmin.setPasswd(null);
             String jwt = JwtUtil.buildJwt(Constant.admin_subject, tbAdmin);
             Cookie cookie = new Cookie(Constant.jwt_head, jwt);
+            cookie.setDomain(".applinzi.com");
             cookie.setPath("/");
             cookie.setMaxAge(Constant.expire);
             response.addCookie(cookie);
