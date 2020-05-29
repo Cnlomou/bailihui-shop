@@ -20,6 +20,7 @@ import java.util.List;
  * @create 2020/5/27 10:01
  */
 
+@Controller
 public class ImageController {
     @Resource
     ImageService imageService;
@@ -39,7 +40,7 @@ public class ImageController {
         response.setContentType("image/*");
         response.setIntHeader("Expires",60*60*1000);       //设置一分钟的缓存
         response.setHeader("Cache-Control", "max-age=600");
-        String str = "/image";
+        String str = "/bailihui";
         imageService.getImage(response,servletPath1.substring(servletPath1.indexOf(str)+str.length()));
     }
 }

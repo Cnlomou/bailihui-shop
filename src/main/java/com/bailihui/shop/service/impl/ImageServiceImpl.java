@@ -1,11 +1,16 @@
 package com.bailihui.shop.service.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.bailihui.shop.dto.Result;
 import com.bailihui.shop.service.ImageService;
+import com.bailihui.shop.util.HttpUtil;
 import lombok.extern.slf4j.Slf4j;
+import okhttp3.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.*;
@@ -16,8 +21,10 @@ import java.util.*;
  */
 
 @Slf4j
+@Service
 public class ImageServiceImpl implements ImageService {
 
+    private static final String URL_PRE = "http://112.124.17.192:8989";
     private static final String[] SUFF = {".jpg", ".png", ".jpeg"};
     @Value("${image.path}")
     private String path;
@@ -29,15 +36,19 @@ public class ImageServiceImpl implements ImageService {
         for (MultipartFile file : multipartFile) {
             if (!isSupport(file))
                 throw new UnsupportedOperationException("不支持的格式：" + file.getOriginalFilename());
+            Response response = null;
             try {
-                File newFile = generateFile(file);
-                file.transferTo(newFile);
-                String path = newFile.getPath();
-                path=path.replaceAll("\\\\","/");
-                result.add(path.substring(this.path.length()));
+                response = HttpUtil.uploadFile(URL_PRE + "/upload", "images", file);
+                Result result1 = JSON.parseObject(response.body().string(), Result.class);
+                if (result1.isFlag())
+                    result.add((String) ((JSONArray) result1.getData()).get(0));
             } catch (IOException e) {
-                log.error(e.getMessage());
-                e.printStackTrace();
+                log.error("上传文件失败，文件名:" + file.getOriginalFilename());
+                throw new IllegalStateException("上传文件失败", e);
+            } finally {
+                if (response != null) {
+                    response.close();
+                }
             }
         }
         return result;
@@ -49,7 +60,7 @@ public class ImageServiceImpl implements ImageService {
         buffer.append(File.separatorChar).append(getTimeString());
         File dir = new File(buffer.toString());
         dir.mkdirs();
-        return new File(dir,File.separatorChar+Math.abs(random.nextInt())+
+        return new File(dir, File.separatorChar + Math.abs(random.nextInt()) +
                 originalFilename.substring(originalFilename.lastIndexOf('.')));
     }
 
@@ -84,18 +95,15 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public void getImage(HttpServletResponse response, String name) {
         try (
-                OutputStream outputStream = response.getOutputStream();
-                InputStream inputStream = new FileInputStream(path + name);
+                Response response1 = HttpUtil.downLoadFile(URL_PRE + name);
         ) {
-            response.setContentLength(inputStream.available());
+            log.info(name);
+            InputStream inputStream1 = response1.body().byteStream();
+            ServletOutputStream outputStream = response.getOutputStream();
             byte[] bytes = new byte[1024];
-            int res = 0;
-            while ((res = inputStream.read(bytes)) != -1)
-                outputStream.write(bytes, 0, res);
-        } catch (FileNotFoundException e) {
-            response.setStatus(404);
-            log.warn("没有的图片文件：" + name);
-            e.printStackTrace();
+            int len = 0;
+            while ((len = inputStream1.read(bytes)) != -1)
+                outputStream.write(bytes, 0, len);
         } catch (IOException e) {
             log.error(e.getMessage());
             e.printStackTrace();

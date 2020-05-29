@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef92dac0-5c90-4e65-97dd-e4790a6d8f8f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/HttpUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/ImageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/ImageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/LoginServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/ImageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" afterDir="false" />
     </list>
@@ -130,6 +131,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ImageServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bailihui.shop.service.impl.ImageServiceImpl" />
+      <module name="bailihui-shop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bailihui.shop.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LoginController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.bailihui.shop.controller.LoginController" />
       <module name="bailihui-shop" />
@@ -165,6 +179,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ImageServiceImpl" />
         <item itemvalue="Application.LoginController" />
         <item itemvalue="Application.ImageController" />
         <item itemvalue="Application.TbOrderServiceImpl" />
@@ -201,6 +216,9 @@
       <workItem from="1590544804501" duration="32022000" />
       <workItem from="1590629660414" duration="40073000" />
       <workItem from="1590717276208" duration="8347000" />
+      <workItem from="1590751862879" duration="1289000" />
+      <workItem from="1590754627900" duration="18000" />
+      <workItem from="1590755215870" duration="5516000" />
     </task>
     <servers />
   </component>
