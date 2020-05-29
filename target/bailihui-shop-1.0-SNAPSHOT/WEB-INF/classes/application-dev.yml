@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/bailihui?serverTimezone=UTC&characterEncoding=utf8
+  profiles: dev
+logging:
+  level:
+    com.bailihui.shop.controller: info
+image:
+  path: D:\image

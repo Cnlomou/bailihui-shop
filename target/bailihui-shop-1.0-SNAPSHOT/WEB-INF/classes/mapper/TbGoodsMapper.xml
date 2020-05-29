@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bailihui.shop.mapper.TbGoodsMapper">
+  <resultMap id="BaseResultMap" type="com.bailihui.shop.pojo.TbGoods">
+    <!--@mbg.generated generated on Mon May 25 21:11:00 CST 2020.-->
+    <!--@Table tb_goods-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="oldPrice" jdbcType="DOUBLE" property="oldprice" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="sellCount" jdbcType="INTEGER" property="sellcount" />
+    <result column="Count" jdbcType="INTEGER" property="count" />
+    <result column="rating" jdbcType="INTEGER" property="rating" />
+    <result column="info" jdbcType="VARCHAR" property="info" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="categoryId" jdbcType="INTEGER" property="categoryid" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="updateTime" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Mon May 25 21:11:00 CST 2020.-->
+    id, `name`, price, oldPrice, description, sellCount, `Count`, rating, info, icon, 
+    `status`, image, categoryId, createTime, updateTime
+  </sql>
+</mapper>

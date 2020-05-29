@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bailihui.shop.mapper.TbUserMapper">
+  <resultMap id="BaseResultMap" type="com.bailihui.shop.pojo.TbUser">
+    <!--@mbg.generated generated on Mon May 25 20:22:38 CST 2020.-->
+    <!--@Table tb_user-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Mon May 25 20:22:38 CST 2020.-->
+    id, userId, address, createTime
+  </sql>
+</mapper>
