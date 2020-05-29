@@ -10,7 +10,7 @@ public class Constant {
     //配送费
     public static final double deliveryPrice=4;
 
-    public static final int order_page_size=20;
+    public static final int order_page_size=10;
 
     public static final String user_attr="user";
 

@@ -2,13 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef92dac0-5c90-4e65-97dd-e4790a6d8f8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/HttpUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/Util.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/ImageServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/ImageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/TbOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/TbOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbOrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui.war.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/ImageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/TbOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/TbOrderService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/util/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/util/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +239,8 @@
       <workItem from="1590717276208" duration="8347000" />
       <workItem from="1590751862879" duration="1289000" />
       <workItem from="1590754627900" duration="18000" />
-      <workItem from="1590755215870" duration="5516000" />
+      <workItem from="1590755215870" duration="7277000" />
+      <workItem from="1590762927019" duration="6361000" />
     </task>
     <servers />
   </component>
@@ -237,16 +259,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/CategoryController.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

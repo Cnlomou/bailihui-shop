@@ -1,6 +1,7 @@
 package com.bailihui.shop.service;
 
 import com.bailihui.shop.dto.Order;
+import com.bailihui.shop.util.Page;
 import com.github.pagehelper.PageInfo;
 
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +15,7 @@ import java.util.List;
 public interface TbOrderService{
 
     Order selectOrderById(Integer id);
-    PageInfo<Order> selectOrderByPage(Integer num);
+    Page<Order> selectOrderByPage(Integer num);
     void deleteOrderById(Integer id);
     void deleteOrders(List<Integer> ids);
     void updateStatus(Integer id,boolean isBuy);

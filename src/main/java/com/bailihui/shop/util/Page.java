@@ -7,10 +7,12 @@ import java.util.List;
  * @author sjh
  */
 public class Page<T> {
+
+    private static final int PAGE_SIZE=10;
     //总数
     private long total;
     //当前页的数据
-    private List<T> ls;
+    private List<T> contents;
     //最前页 不是第一页
     private long ppage;
     //当前页
@@ -20,7 +22,7 @@ public class Page<T> {
     //总页数
     private long pageCount;
     //页大小
-    private int pageSize;
+    private int pageSize=PAGE_SIZE;
     //偏移量
     private int offset = 2;
 
@@ -30,14 +32,14 @@ public class Page<T> {
     private long nextPage;
 
     public Page(long total, long currentPage, List<T> ls) {
-        this(total, currentPage, ls.size());
-        this.ls = ls;
+        this(total, currentPage,PAGE_SIZE, ls);
+        this.contents = ls;
     }
 
-    public Page(long total, long currentPage, int pageSize) {
+    public Page(long total, long currentPage, int pageSize,List<T> ls) {
         this.total = total;
         this.pageSize = pageSize;
-
+        this.contents=ls;
         initData(currentPage);
 
     }
@@ -53,8 +55,6 @@ public class Page<T> {
         else
             this.currentPage = currentPage < 1 ? 1 : currentPage;
 
-        //默认给当前页数据赋为null
-        this.ls = null;
         //算出显示的第一页
         this.ppage = Math.max(currentPage - offset, 1);
         //算出显示的最后一页
@@ -77,12 +77,12 @@ public class Page<T> {
         this.total = total;
     }
 
-    public List<T> getCurrentPageContent() {
-        return ls;
+    public List<T> getContents() {
+        return contents;
     }
 
-    public void setCurrentPageContent(List<T> ls) {
-        this.ls = ls;
+    public void setContents(List<T> ls) {
+        this.contents = ls;
     }
 
     public long getPpage() {

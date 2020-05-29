@@ -4,6 +4,7 @@ import com.bailihui.shop.config.Constant;
 import com.bailihui.shop.dto.Order;
 import com.bailihui.shop.dto.Result;
 import com.bailihui.shop.service.TbOrderService;
+import com.bailihui.shop.util.Page;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +34,8 @@ public class OrderController {
     }
 
     @GetMapping("/page/{pageNum}")
-    public Result<PageInfo<Order>> findOrders(@PathVariable(name = "pageNum") Integer num) {
-        PageInfo<Order> orderPageInfo = tbOrderService.selectOrderByPage(num);
+    public Result<Page<Order>> findOrders(@PathVariable(name = "pageNum") Integer num) {
+        Page<Order> orderPageInfo = tbOrderService.selectOrderByPage(num);
         return new Result<>(true, "SUCCESS", orderPageInfo);
     }
 

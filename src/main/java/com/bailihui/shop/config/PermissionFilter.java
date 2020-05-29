@@ -13,6 +13,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * @author Cnlomou
@@ -20,23 +23,36 @@ import java.util.Arrays;
  */
 @Slf4j
 public class PermissionFilter implements Filter {
+    private List<Predicate<String>> exclude = Collections.EMPTY_LIST;
+
+    public PermissionFilter(List<Predicate<String>> exclude) {
+        this.exclude = exclude;
+    }
+
+    public PermissionFilter() {
+
+    }
+
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        if(servletRequest instanceof HttpServletRequest){
-            intercepte((HttpServletRequest)servletRequest,(HttpServletResponse) servletResponse,filterChain);
+        if (servletRequest instanceof HttpServletRequest) {
+            HttpServletRequest servletRequest1 = (HttpServletRequest) servletRequest;
+            HttpServletResponse servletResponse1 = (HttpServletResponse) servletResponse;
+            if (!doExclude(servletRequest1, filterChain))
+                intercepte(servletRequest1, servletResponse1, filterChain);
         }
     }
 
     private void intercepte(HttpServletRequest servletRequest, HttpServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         Cookie[] cookies = servletRequest.getCookies();
-        if(cookies!=null||cookies.length>0){
-            if(servletRequest.getCookies()!=null)
+        if (cookies != null || cookies.length > 0) {
+            if (servletRequest.getCookies() != null)
                 System.out.println(Arrays.toString(servletRequest.getCookies()));
             if (checkCookie(servletRequest))
-                filterChain.doFilter(servletRequest,servletResponse);
+                filterChain.doFilter(servletRequest, servletResponse);
             else if (checkHeader(servletRequest))
-                filterChain.doFilter(servletRequest,servletResponse);
-            if(log.isWarnEnabled())
+                filterChain.doFilter(servletRequest, servletResponse);
+            if (log.isWarnEnabled())
                 log.warn("没有权限的请求");
             servletResponse.setStatus(401);
             Result res = Result.failure(401, "请登录");
@@ -82,6 +98,17 @@ public class PermissionFilter implements Filter {
                         e.printStackTrace();
                     }
                 }
+            }
+        }
+        return false;
+    }
+
+    private boolean doExclude(HttpServletRequest request, FilterChain chain) {
+        String servletPath = request.getServletPath();
+        for (Predicate<String> s : exclude) {
+            if (s.test(servletPath)) {
+                log.info("排除这个请求：" + servletPath);
+                return true;
             }
         }
         return false;

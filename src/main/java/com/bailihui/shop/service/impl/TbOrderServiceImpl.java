@@ -10,6 +10,7 @@ import com.bailihui.shop.pojo.TbOrder;
 import com.bailihui.shop.pojo.TbUser;
 import com.bailihui.shop.service.TbGoodsService;
 import com.bailihui.shop.util.JwtUtil;
+import com.bailihui.shop.util.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import io.jsonwebtoken.Claims;
@@ -96,9 +97,9 @@ public class TbOrderServiceImpl implements TbOrderService {
      * @return
      */
     @Override
-    public PageInfo<Order> selectOrderByPage(Integer num) {
+    public Page<Order> selectOrderByPage(Integer num) {
         PageHelper.startPage(num, Constant.order_page_size);
-        List<TbOrder> orders = tbOrderMapper.selectByExample(Example.builder(TbOrder.class)
+        com.github.pagehelper.Page<TbOrder> orders = (com.github.pagehelper.Page<TbOrder>) tbOrderMapper.selectByExample(Example.builder(TbOrder.class)
                 .orderByDesc("createtime").build());
         List<Order> orderList = new ArrayList<>();
         orders.forEach(order -> {
@@ -113,7 +114,7 @@ public class TbOrderServiceImpl implements TbOrderService {
                     .address(order.getAddress())
                     .build());
         });
-        return new PageInfo<>(orderList);
+        return new Page<>(orders.getTotal(), num, orderList);
     }
 
     @Override
