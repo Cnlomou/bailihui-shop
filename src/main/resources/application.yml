@@ -1,7 +1,9 @@
 spring:
   profiles:
-    active: dev
+    active: pro
 #  servlet:
 #    multipart:
 #      max-file-size: 10MB
 #      file-size-threshold: 10MB
+image:
+  path: D:\image

@@ -1,0 +1,8 @@
+server:
+  servlet:
+    context-path: /bailihui
+spring:
+  datasource:
+    username: bailihui
+    password: 123456
+    url: jdbc:mysql://47.95.215.227:3306/bailihui?serverTimezone=UTC&characterEncoding=utf8

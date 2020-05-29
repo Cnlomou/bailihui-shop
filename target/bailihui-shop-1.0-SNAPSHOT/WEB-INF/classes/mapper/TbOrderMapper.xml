@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bailihui.shop.mapper.TbOrderMapper">
+  <resultMap id="BaseResultMap" type="com.bailihui.shop.pojo.TbOrder">
+    <!--@mbg.generated generated on Wed May 27 12:10:12 CST 2020.-->
+    <!--@Table tb_order-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userName" jdbcType="VARCHAR" property="username" />
+    <result column="userId" jdbcType="VARCHAR" property="userid" />
+    <result column="goods" jdbcType="VARCHAR" property="goods" />
+    <result column="money" jdbcType="DOUBLE" property="money" />
+    <result column="createTime" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="status" jdbcType="CHAR" property="status" />
+    <result column="deliveryPrice" jdbcType="DOUBLE" property="deliveryprice" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated generated on Wed May 27 12:10:12 CST 2020.-->
+    id, userName, userId, goods, money, createTime, `status`, deliveryPrice, address
+  </sql>
+</mapper>
