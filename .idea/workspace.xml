@@ -2,36 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ef92dac0-5c90-4e65-97dd-e4790a6d8f8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/PermissionInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/ShopApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/ShopApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/TbOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/TbOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/TbGoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/TbGoodsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/LoginServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbOrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbOrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/util/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbCategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbGoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bailihui/shop/service/impl/TbGoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TbCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TbCategoryMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bailihui.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/bailihui.war.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui.war.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/ImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/ImageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/PermissionInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/ShopApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/ShopApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/PermissionFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/PermissionFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/PermissionInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/PermissionInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/controller/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/TbGoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/TbGoodsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/TbOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/TbOrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/TbCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/TbCategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/TbGoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/TbGoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/TbOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/service/impl/TbOrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/util/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/com/bailihui/shop/util/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/mapper/TbCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/bailihui/WEB-INF/classes/mapper/TbCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/ShopApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/ShopApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/OrderController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/TbOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/TbOrderService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/ImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/controller/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/TbGoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/TbGoodsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/LoginServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbOrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbOrderServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/util/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/util/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbCategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbCategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbGoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/bailihui/shop/service/impl/TbGoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TbCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TbCategoryMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,14 +105,12 @@
         <option name="mavenHome" value="D:/maven/apache-maven-3.6.1" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1cOo3RxXQ1Dfrwse531e2ZRbHxf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -119,24 +128,15 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\util" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ShopApplication">
     <configuration name="ImageController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -207,21 +207,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c7ee8876" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -240,24 +225,36 @@
       <workItem from="1590751862879" duration="1289000" />
       <workItem from="1590754627900" duration="18000" />
       <workItem from="1590755215870" duration="7277000" />
-      <workItem from="1590762927019" duration="6361000" />
+      <workItem from="1590762927019" duration="6566000" />
+      <workItem from="1590799546189" duration="595000" />
+      <workItem from="1590800541149" duration="6251000" />
+      <workItem from="1590906339484" duration="865000" />
+      <workItem from="1590908940365" duration="939000" />
+      <workItem from="1590918478812" duration="1522000" />
+      <workItem from="1590921513818" duration="19000" />
+      <workItem from="1603333486851" duration="48000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="249" y="0" key="SettingsEditor" timestamp="1603333532957">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603333532957" />
   </component>
 </project>

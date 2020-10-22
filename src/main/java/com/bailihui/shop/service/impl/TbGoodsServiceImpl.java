@@ -1,5 +1,6 @@
 package com.bailihui.shop.service.impl;
 
+import com.bailihui.shop.config.Constant;
 import com.bailihui.shop.dto.Goods;
 import com.bailihui.shop.dto.GoodsDetails;
 import com.bailihui.shop.mapper.TbCategoryMapper;
@@ -9,6 +10,12 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.Cache;
+import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.Caching;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -38,14 +45,15 @@ public class TbGoodsServiceImpl implements TbGoodsService {
     @Resource
     private TbCategoryMapper tbCategoryMapper;
 
-    @Override
-    public List<Goods> getGoods(int size) {
-        List<Goods> goods = new ArrayList<>();
-        List<TbCategory> tbCategories = tbCategoryMapper.selectByExample(
-                Example.builder(TbCategory.class)
-                        .orderByAsc("order")
-                        .build());
+    @Autowired
+    private CacheManager cacheManager;
 
+    @Override
+    @Cacheable(cacheNames = {"goods"}, key = "'init'")
+    public List<Goods> getGoods(int size) {
+        log.info("读取了数据库-------------------");
+        List<Goods> goods = new ArrayList<>();
+        List<TbCategory> tbCategories = getCategories();
         tbCategories.forEach(category -> {
             goods.add(Goods.builder()
                     .category(category)
@@ -53,6 +61,22 @@ public class TbGoodsServiceImpl implements TbGoodsService {
                     .build());
         });
         return goods;
+    }
+
+    private List<TbCategory> getCategories() {
+        Cache cache = cacheManager.getCache("goods");
+        List<TbCategory> tbCategories = null;
+        Cache.ValueWrapper category = cache.get("category");
+        if (category==null) {
+            tbCategories = tbCategoryMapper.selectByExample(
+                    Example.builder(TbCategory.class)
+                            .orderByAsc("order")
+                            .build());
+        } else {
+            log.info("读了cache中的分类信息");
+            tbCategories = (List<TbCategory>) category.get();
+        }
+        return tbCategories;
     }
 
     private List<TbGoods> getGoods(int categoryId, int size) {
@@ -90,6 +114,7 @@ public class TbGoodsServiceImpl implements TbGoodsService {
 
     @Override
     @Transactional
+    @CacheEvict(cacheNames = "goods", key = "init")
     public void insertGoods(List<TbGoods> goods) {
         goods.forEach(good -> {
             if (good.getOldprice() == null)
@@ -159,6 +184,14 @@ public class TbGoodsServiceImpl implements TbGoodsService {
         TbGoods tbGoods1 = getGoodsAndSetValue(id, index, value);
         log.info("更新商品信息,id:{},field:{}=>{}", id, field, value);
         tbGoodsMapper.updateByPrimaryKeySelective(tbGoods1);
+    }
+
+    @Override
+    public Map<String, ?> readConfig() {
+        Map<String, Double> map = new HashMap<>();
+        map.put("minPrice", Constant.minPrice);
+        map.put("deliveryPrice", Constant.deliveryPrice);
+        return map;
     }
 
 

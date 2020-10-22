@@ -1,10 +1,13 @@
 package com.bailihui.shop.service.impl;
 
 import com.bailihui.shop.pojo.TbCategory;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import com.bailihui.shop.mapper.TbCategoryMapper;
 import com.bailihui.shop.service.TbCategoryService;
+import tk.mybatis.mapper.entity.Example;
 import tk.mybatis.mapper.util.Assert;
 
 import java.util.List;
@@ -20,6 +23,7 @@ public class TbCategoryServiceImpl implements TbCategoryService{
     private TbCategoryMapper tbCategoryMapper;
 
     @Override
+    @CacheEvict(cacheNames = "goods",key = "'category'")
     public void insertCategory(TbCategory tbCategory) {
         tbCategoryMapper.insertSelective(tbCategory);
     }
@@ -41,7 +45,11 @@ public class TbCategoryServiceImpl implements TbCategoryService{
     }
 
     @Override
+    @Cacheable(cacheNames = "goods",key = "'category'")
     public List<TbCategory> selectAll() {
-        return tbCategoryMapper.selectAll();
+        return tbCategoryMapper.selectByExample(
+                Example.builder(TbCategory.class)
+                        .orderByAsc("order")
+                        .build());
     }
 }

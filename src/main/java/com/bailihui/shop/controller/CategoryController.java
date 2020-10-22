@@ -22,7 +22,7 @@ public class CategoryController {
     private TbCategoryService tbCategoryService;
 
     @PostMapping("/add")
-    public Result addCategory(TbCategory tbCategory) {
+    public Result addCategory(@RequestBody TbCategory tbCategory) {
         tbCategoryService.insertCategory(tbCategory);
         return new Result<>(true, "SUCCESS", null);
     }

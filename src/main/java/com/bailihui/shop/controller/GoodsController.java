@@ -63,10 +63,8 @@ public class GoodsController {
     }
 
     @GetMapping("/config/get")
-    public Result<Map<String, Double>> readConfig() {
-        Map<String, Double> map = new HashMap<>();
-        map.put("minPrice", Constant.minPrice);
-        map.put("deliveryPrice", Constant.deliveryPrice);
+    public Result<Map<String, Object>> readConfig() {
+        Map<String, Object> map = (Map<String, Object>) tbGoodsService.readConfig();
         return new Result<>(true, "SUCCESS", map);
     }
 

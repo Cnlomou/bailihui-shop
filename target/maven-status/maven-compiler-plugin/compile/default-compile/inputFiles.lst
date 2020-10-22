@@ -33,6 +33,7 @@ E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\config\PermissionIn
 E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\controller\UserController.java
 E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\controller\AdminController.java
 E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\util\JwtUtil.java
+E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\util\Util.java
 E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\service\impl\TbAdminServiceImpl.java
 E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\service\LoginService.java
 E:\ideaProject\bailihui-shop\src\main\java\com\bailihui\shop\exception\NotPermissionException.java

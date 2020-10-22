@@ -6,6 +6,7 @@ import com.bailihui.shop.pojo.TbGoods;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Cnlomou
@@ -22,4 +23,6 @@ public interface TbGoodsService{
     PageInfo<GoodsDetails> getGoodsByPage(int pageNum, int size);
 
     void updateGoodsByField(Integer id,String field,String value);
+
+    Map<String,?> readConfig();
 }

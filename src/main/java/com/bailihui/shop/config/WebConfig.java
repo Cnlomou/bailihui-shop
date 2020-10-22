@@ -53,10 +53,10 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new PermissionInterceptor())
                 .addPathPatterns("/admin/**").excludePathPatterns("/admin/login")
-                .addPathPatterns("/goods/**").excludePathPatterns("/goods/init/goods/*", "/goods/category/*", "/goods/config/get","/goods/page/goodsdetails")
+                .addPathPatterns("/goods/**").excludePathPatterns("/goods/init/goods/*", "/goods/category/*", "/goods/config/get")
                 .addPathPatterns("/category/**").excludePathPatterns("/category/all", "/category/{id}")
                 .addPathPatterns("/upload")
-                .addPathPatterns("/order/**");
+                .addPathPatterns("/order/**").excludePathPatterns("/order/add");
     }
 
 
