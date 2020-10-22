@@ -1,0 +1,49 @@
+{
+  "pages":[
+    "pages/classification/index",
+    "pages/index/index",
+    "pages/ucenter/mycoupons/index",
+    "pages/ucenter/feedback/feedback",
+    "pages/ucenter/location/location",
+    "pages/ucenter/order-list/index",
+    "pages/ucenter/index/index",
+    "pages/shop-cart/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#00afb4",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "box-shadow": "0 0 4px 0",
+    "list": [
+      {
+        "pagePath": "pages/classification/index",
+        "iconPath": "img/nav/classification-off.png",
+        "selectedIconPath": "img/nav/classification-on.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/shop-cart/index",
+        "iconPath": "img/nav/cart-off.png",
+        "selectedIconPath": "img/nav/cart-on.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "iconPath": "img/nav/my-off.png",
+        "selectedIconPath": "img/nav/my-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+
+}
